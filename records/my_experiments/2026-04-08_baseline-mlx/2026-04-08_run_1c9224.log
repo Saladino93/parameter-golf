@@ -1,0 +1,128 @@
+logs/9b143ee4-3d3e-4423-9b4e-8c14a51ab704.txt
+run_id:9b143ee4-3d3e-4423-9b4e-8c14a51ab704
+mlx_version:0.31.1
+train_loader:shards pattern=./data/datasets/fineweb10B_sp1024/fineweb_train_*.bin
+val_loader:shards pattern=./data/datasets/fineweb10B_sp1024/fineweb_val_*.bin tokens:62021632
+WARNING: train_loader:subset dataset:fineweb10B_sp1024 train_shards:10/195 new epochs will arrive sooner than the full dataset
+tokenizer_path:./data/tokenizers/fineweb_1024_bpe.model
+model_params:17059912 vocab_size:1024 layers:9 dim:512 heads:8 kv_heads:4 seq_len:1024 tie_embeddings:True
+iterations:20000 train_batch_tokens:524288 grad_accum_steps:8 microbatch_tokens:65536 microbatch_batch_size:64 val_batch_size:524288 warmup_steps:20 max_wallclock_seconds:600.000
+mlx_max_microbatch_tokens:8192
+optimizer:muon+adam muon_matrix_params:54 scalar_params:37 embed_lr:0.05 matrix_lr:0.04 scalar_lr:0.04 muon_momentum:0.95 muon_steps:5
+val_bpb:enabled tokenizer_kind=sentencepiece tokenizer_path=./data/tokenizers/fineweb_1024_bpe.model
+compute_dtype:mlx.core.bfloat16 compile:True
+dtypes tok_emb:mlx.core.bfloat16 linear_weight:mlx.core.float32 skip_weights:mlx.core.float32
+warmup_step:1/20
+warmup_step:2/20
+warmup_step:3/20
+warmup_step:4/20
+warmup_step:5/20
+warmup_step:6/20
+warmup_step:7/20
+warmup_step:8/20
+warmup_step:9/20
+warmup_step:10/20
+warmup_step:11/20
+warmup_step:12/20
+warmup_step:13/20
+warmup_step:14/20
+warmup_step:15/20
+warmup_step:16/20
+warmup_step:17/20
+warmup_step:18/20
+warmup_step:19/20
+warmup_step:20/20
+step:1/20000 train_loss:6.9371 train_time:19001ms step_avg:19001.11ms tok_s:27593
+step:2/20000 train_loss:16.7689 train_time:37926ms step_avg:18963.19ms tok_s:27703
+step:3/20000 train_loss:16.5127 train_time:56870ms step_avg:18956.77ms tok_s:27676
+step:4/20000 train_loss:16.0782 train_time:75855ms step_avg:18963.71ms tok_s:27617
+step:5/20000 train_loss:15.7905 train_time:94760ms step_avg:18952.02ms tok_s:27733
+step:6/20000 train_loss:15.2359 train_time:113671ms step_avg:18945.20ms tok_s:27724
+step:7/20000 train_loss:14.9457 train_time:132739ms step_avg:18962.68ms tok_s:27497
+step:8/20000 train_loss:14.5816 train_time:151888ms step_avg:18985.96ms tok_s:27380
+step:9/20000 train_loss:14.2520 train_time:171030ms step_avg:19003.33ms tok_s:27389
+step:10/20000 train_loss:13.9099 train_time:190191ms step_avg:19019.14ms tok_s:27362
+val_progress:1/947
+val_progress:25/947
+val_progress:50/947
+val_progress:75/947
+val_progress:100/947
+val_progress:125/947
+val_progress:150/947
+val_progress:175/947
+val_progress:200/947
+val_progress:225/947
+val_progress:250/947
+val_progress:275/947
+val_progress:300/947
+val_progress:325/947
+val_progress:350/947
+val_progress:375/947
+val_progress:400/947
+val_progress:425/947
+val_progress:450/947
+val_progress:475/947
+val_progress:500/947
+val_progress:525/947
+val_progress:550/947
+val_progress:575/947
+val_progress:600/947
+val_progress:625/947
+val_progress:650/947
+val_progress:675/947
+val_progress:700/947
+val_progress:725/947
+val_progress:750/947
+val_progress:775/947
+val_progress:800/947
+val_progress:825/947
+val_progress:850/947
+val_progress:875/947
+val_progress:900/947
+val_progress:925/947
+val_progress:947/947
+step:31/20000 val_loss:10.3700 val_bpb:6.1417 train_time:603531ms step_avg:19468.74ms
+stopping_early: wallclock_cap train_time:603531ms step:31/20000
+saved_model:logs/9b143ee4-3d3e-4423-9b4e-8c14a51ab704_mlx_model.npz bytes:67212188
+serialized_model_int8_zlib:5136656 bytes (payload:17178912 raw_pickle:17188361 payload_ratio:3.91x)
+val_progress:1/947
+val_progress:25/947
+val_progress:50/947
+val_progress:75/947
+val_progress:100/947
+val_progress:125/947
+val_progress:150/947
+val_progress:175/947
+val_progress:200/947
+val_progress:225/947
+val_progress:250/947
+val_progress:275/947
+val_progress:300/947
+val_progress:325/947
+val_progress:350/947
+val_progress:375/947
+val_progress:400/947
+val_progress:425/947
+val_progress:450/947
+val_progress:475/947
+val_progress:500/947
+val_progress:525/947
+val_progress:550/947
+val_progress:575/947
+val_progress:600/947
+val_progress:625/947
+val_progress:650/947
+val_progress:675/947
+val_progress:700/947
+val_progress:725/947
+val_progress:750/947
+val_progress:775/947
+val_progress:800/947
+val_progress:825/947
+val_progress:850/947
+val_progress:875/947
+val_progress:900/947
+val_progress:925/947
+val_progress:947/947
+final_int8_zlib_roundtrip val_loss:10.9573 val_bpb:6.4895 eval_time:480595ms
+final_int8_zlib_roundtrip_exact val_loss:10.95729286 val_bpb:6.48952602
